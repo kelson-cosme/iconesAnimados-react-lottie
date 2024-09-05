@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import "./app.css"
+import "./App.css"
 
 import Lottie from 'react-lottie';
 import animationData from "./assets/animacao.json"
