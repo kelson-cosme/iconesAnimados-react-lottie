@@ -7,6 +7,10 @@ import animationData from "./assets/animacao.json"
 import animationLayout from "./assets/layout.json"
 import animationSuporte from "./assets/suporte.json"
 import animationFast from "./assets/fast.json"
+import animationGoogle from "./assets/google.json"
+import animationUi from "./assets/ui_ux.json"
+import animationPersonalizacao from "./assets/personalizacao.json"
+
 
 function App() {
 
@@ -31,13 +35,26 @@ function App() {
     isStopped: true, isPaused: false
   })
 
+  const [aniStateGoogle, setAniStateGoogle ] = useState({
+    isStopped: true, isPaused: false
+  })
+
+  const [aniStatePersonalizacao, setAniStatePersonalizacao ] = useState({
+    isStopped: true, isPaused: false
+  })
+
+  const [aniStateUi, SetAniStateUi ] = useState({
+    isStopped: true, isPaused: false
+  })
+
+
 
 
   //CONFIGURAÇÕES DEFALT
 
   const defaultOptions = {
-    loop: true,
-    autoplay: false, 
+    loop: false,
+    autoplay: true, 
     animationData: animationData,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice'
@@ -45,8 +62,8 @@ function App() {
   };
 
   const layout = {
-    loop: true,
-    autoplay: false, 
+    loop: false,
+    autoplay: true, 
     animationData: animationLayout,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice'
@@ -54,8 +71,8 @@ function App() {
   };
 
   const suporte = {
-    loop: true,
-    autoplay: false, 
+    loop: false,
+    autoplay: true, 
     animationData: animationSuporte,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice'
@@ -63,13 +80,41 @@ function App() {
   };
 
   const fast = {
-    loop: true,
-    autoplay: false, 
+    loop: false,
+    autoplay: true, 
     animationData: animationFast,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice'
     }
   };
+
+  const google = {
+    loop: false,
+    autoplay: true, 
+    animationData: animationGoogle,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
+  const personalizacao = {
+    loop: false,
+    autoplay: true, 
+    animationData: animationPersonalizacao,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
+  const ui = {
+    loop: false,
+    autoplay: true, 
+    animationData: animationUi,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+  
 
 
 
@@ -197,6 +242,98 @@ function App() {
           // width={400}
           isStopped={aniStateFast.isStopped}
           isPaused={aniStateFast.isPaused}/>
+        </button>
+
+        {/* <span>
+          {like ? 1 : 0}
+        </span> */}
+
+      </div>
+
+      <div className='responsive google'> 
+        <button 
+          onMouseEnter={() => { 
+            setAniStateGoogle({
+                ...aniStateGoogle,
+                isStopped: false,
+              })
+            setLike(!like)}}
+
+            onMouseLeave={() => {
+              setAniStateGoogle({
+                ...aniStateGoogle,
+                isStopped: true,
+              })
+            }}>Google
+
+        <Lottie 
+          options={google}
+          direction={1}
+
+          // height={400}
+          // width={400}
+          isStopped={aniStateGoogle.isStopped}
+          isPaused={aniStateGoogle.isPaused}/>
+        </button>
+
+        {/* <span>
+          {like ? 1 : 0}
+        </span> */}
+
+      </div>
+
+      <div className='responsive personalizacao'> 
+        <button 
+          onMouseEnter={() => { 
+            setAniStatePersonalizacao({
+                ...aniStatePersonalizacao,
+                isStopped: false,
+              })
+            setLike(!like)}}
+
+            onMouseLeave={() => {
+              setAniStatePersonalizacao({
+                ...aniStatePersonalizacao,
+                isStopped: true,
+              })
+            }}>personalizacao
+
+        <Lottie 
+          options={personalizacao}
+          // height={400}
+          // width={400}
+          isStopped={aniStatePersonalizacao.isStopped}
+          isPaused={aniStatePersonalizacao.isPaused}/>
+        </button>
+
+        {/* <span>
+          {like ? 1 : 0}
+        </span> */}
+
+      </div>
+
+      <div className='responsive ui'> 
+        <button 
+          onMouseEnter={() => { 
+            SetAniStateUi({
+                ...aniStateUi,
+                isStopped: false,
+              })
+            setLike(!like)}}
+
+            onMouseLeave={() => {
+              SetAniStateUi({
+                ...aniStateUi,
+                isStopped: true,
+              })
+            }}>Ui/Ux
+
+        <Lottie 
+          options={ui}
+          // height={400}
+          // width={400}
+          isStopped={aniStateUi.isStopped}
+          isPaused={aniStateUi.isPaused}/>
         </button>
 
         {/* <span>
