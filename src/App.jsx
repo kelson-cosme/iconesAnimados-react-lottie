@@ -1,484 +1,52 @@
-// import { useState } from 'react'
-
-// import "./App.css"
-
-// import Lottie from 'react-lottie';
-// import animationData from "./assets/animacao.json"
-// import animationLayout from "./assets/layout.json"
-// import animationSuporte from "./assets/suporte.json"
-// import animationFast from "./assets/fast.json"
-// import animationGoogle from "./assets/google.json"
-// import animationUi from "./assets/ui_ux.json"
-// import animationPersonalizacao from "./assets/personalizacao.json"
-
-
-// function App() {
-
-//   const [like, setLike] = useState(false)
-
-//   //ESTADO DA ANIMAÇÃO
-
-//   const [animationState, setAnimatinoState ] = useState({
-//     isStopped: true, isPaused: false,
-//   })
-
-//   const [aniStateLayout, setAniStateLayout ] = useState({
-//     isStopped: true, isPaused: false,
-//   })
-
-//   const [aniStateSuporte, setAniStateSuporte ] = useState({
-//     isStopped: true, isPaused: false,
-
-
-//   })
-
-//   const [aniStateFast, setAniStateFast ] = useState({
-//     isStopped: true, isPaused: false
-//   })
-
-//   const [aniStateGoogle, setAniStateGoogle ] = useState({
-//     isStopped: true, isPaused: false
-//   })
-
-//   const [aniStatePersonalizacao, setAniStatePersonalizacao ] = useState({
-//     isStopped: true, isPaused: false
-//   })
-
-//   const [aniStateUi, SetAniStateUi ] = useState({
-//     isStopped: true, isPaused: false
-//   })
-
-
-//   //CONFIGURAÇÕES DEFALT
-
-//   const defaultOptions = {
-//     loop: false,
-//     autoplay: false, 
-//     animationData: animationData,
-//     rendererSettings: {
-//       preserveAspectRatio: 'xMidYMid slice'
-//     }
-//   };
-
-//   const layout = {
-//     loop: true,
-//     autoplay: false, 
-//     animationData: animationLayout,
-//     rendererSettings: {
-//       preserveAspectRatio: 'xMidYMid slice'
-//     }
-//   };
-
-//   const suporte = {
-//     loop: false,
-//     autoplay: false, 
-//     animationData: animationSuporte,
-//     rendererSettings: {
-//       preserveAspectRatio: 'xMidYMid slice'
-//     }
-//   };
-
-//   const fast = {
-//     loop: false,
-//     autoplay: false, 
-//     animationData: animationFast,
-//     rendererSettings: {
-//       preserveAspectRatio: 'xMidYMid slice'
-//     }
-//   };
-
-//   const google = {
-//     loop: true,
-//     autoplay: false, 
-//     animationData: animationGoogle,
-//     rendererSettings: {
-//       preserveAspectRatio: 'xMidYMid slice'
-//     }
-//   };
-
-//   const personalizacao = {
-//     loop: false,
-//     autoplay: false, 
-//     animationData: animationPersonalizacao,
-//     rendererSettings: {
-//       preserveAspectRatio: 'xMidYMid slice'
-//     }
-//   };
-
-//   const ui = {
-//     loop: false,
-//     autoplay: false, 
-//     animationData: animationUi,
-//     rendererSettings: {
-//       preserveAspectRatio: 'xMidYMid slice'
-//     }
-//   };
-  
-
-
-
-//   return (
-
-// <>
-//     <h1>Icones Animados</h1>
-//     <h2>react-lottie</h2>
-//     <h2>https://lottiefiles.com/</h2>
-//     <h4>*Passe o mouse por cima dos botões*</h4>
-
-
-//   <div className='icons'>
-
-//     {/* ICONES */}
-//       <div className='responsive'> 
-//         <button 
-//           onMouseEnter={() => { 
-//               setAnimatinoState({
-//                 ...animationState,
-//                 isStopped: false,
-                
-//               })
-//             setLike(!like)}}
-
-//             onMouseLeave={() => {
-//               setAnimatinoState({
-//                 ...animationState,
-//                 isStopped: true,
-
-//               })
-//             }}>Responsividade
-
-//         <Lottie 
-//           options={defaultOptions}
-//           direction={animationState.direction}
-
-//           // height={400}
-//           // width={400}
-//           isStopped={animationState.isStopped}
-//           isPaused={animationState.isPaused}/>
-//         </button>
-
-//         {/* <span>
-//           {like ? 1 : 0}
-//         </span> */}
-
-//       </div>
-
-//       <div className='responsive layout'> 
-//         <button 
-//           onMouseEnter={() => { 
-//             setAniStateLayout({
-//                 ...aniStateLayout,
-//                 isStopped: false,
-                
-//               })
-
-              
-//             setLike(!like)}}
-
-//             onMouseLeave={() => {
-//               setAniStateLayout({
-//                 ...aniStateLayout,
-//                 isStopped: true,
-
-//               })
-//             }}>layout
-
-//         <Lottie 
-//           options={layout}
-          
-//           // height={400}
-//           // width={400}
-//           isStopped={aniStateLayout.isStopped}
-//           isPaused={aniStateLayout.isPaused} />
-//         </button>
-
-//         {/* <span>
-//           {like ? 1 : 0}
-//         </span> */}
-
-//       </div>
-
-//       <div className='responsive suporte'> 
-//         <button 
-//           onMouseEnter={() => { 
-//             setAniStateSuporte({
-//                 ...aniStateSuporte,
-//                 isStopped: false,
-
-//               })
-//               console.log(animationLayout)
-//             setLike(!like)}}
-
-//             onMouseLeave={() => {
-//               setAniStateSuporte({
-//                 ...aniStateSuporte,
-//                 isStopped: true,
-
-//               })
-//             }}>Suporte
-
-//         <Lottie 
-//           options={suporte}
-//           // height={400}
-//           // width={400}
-//           isStopped={aniStateSuporte.isStopped}
-//           isPaused={aniStateSuporte.isPaused}/>
-//         </button>
-
-//         {/* <span>
-//           {like ? 1 : 0}
-//         </span> */}
-
-//       </div>
-
-//       <div className='responsive'> 
-//         <button 
-//           onMouseEnter={() => { 
-//             setAniStateFast({
-//                 ...aniStateFast,
-//                 isStopped: false,
-
-//               })
-//             setLike(!like)}}
-
-//             onMouseLeave={() => {
-//               setAniStateFast({
-//                 ...aniStateFast,
-//                 isStopped: true,
-//               })
-//             }}>Relampago
-
-//         <Lottie 
-//           options={fast}
-//           // height={400}
-//           // width={400}
-//           isStopped={aniStateFast.isStopped}
-//           isPaused={aniStateFast.isPaused}/>
-//         </button>
-
-//         {/* <span>
-//           {like ? 1 : 0}
-//         </span> */}
-
-//       </div>
-
-//       <div className='responsive google'> 
-//         <button 
-//           onMouseEnter={() => { 
-
-//             setAniStateGoogle({
-//                 ...aniStateGoogle,
-//                 isStopped: false,
-
-//               })
-
-//             setLike(!like)}}
-
-//             onMouseLeave={() => {
-//               setAniStateGoogle({
-//                 ...aniStateGoogle,
-//                 isStopped: true,
-//               })
-
-//             }}>Google
-
-//         <Lottie 
-//           options={google}
-//           direction={1}
-
-//           // height={400}
-//           // width={400}
-//           isStopped={aniStateGoogle.isStopped}
-//           isPaused={aniStateGoogle.isPaused}/>
-//         </button>
-
-//         {/* <span>
-//           {like ? 1 : 0}
-//         </span> */}
-
-//       </div>
-
-//       <div className='responsive personalizacao'> 
-//         <button 
-//           onMouseEnter={() => { 
-//             setAniStatePersonalizacao({
-//                 ...aniStatePersonalizacao,
-//                 isStopped: false,
-//               })
-//             setLike(!like)}}
-
-//             onMouseLeave={() => {
-//               setAniStatePersonalizacao({
-//                 ...aniStatePersonalizacao,
-//                 isStopped: true,
-//               })
-//             }}>personalizacao
-
-//         <Lottie 
-//           options={personalizacao}
-//           // height={400}
-//           // width={400}
-//           isStopped={aniStatePersonalizacao.isStopped}
-//           isPaused={aniStatePersonalizacao.isPaused}/>
-//         </button>
-
-//         {/* <span>
-//           {like ? 1 : 0}
-//         </span> */}
-
-//       </div>
-
-//       <div className='responsive ui'> 
-//         <button 
-//           onMouseEnter={() => { 
-//             SetAniStateUi({
-//                 ...aniStateUi,
-//                 isStopped: false,
-//               })
-//             setLike(!like)}}
-
-//             onMouseLeave={() => {
-//               SetAniStateUi({
-//                 ...aniStateUi,
-//                 isStopped: true,
-//               })
-//             }}>Ui/Ux
-
-//         <Lottie 
-//           options={ui}
-//           // height={400}
-//           // width={400}
-//           isStopped={aniStateUi.isStopped}
-//           isPaused={aniStateUi.isPaused}/>
-//         </button>
-
-//         {/* <span>
-//           {like ? 1 : 0}
-//         </span> */}
-
-//       </div>
-//     </div>
-
-//     </>
-//   )
-// }
-
-// export default App
-
-
-
-// import { useState } from 'react'
-
-// import "./App.css"
-
-// import Lottie from 'react-lottie';
-// import animationSuporte from "./assets/suporte.json"
-
-
-
-// function App() {
-
-
-//   //ESTADO DA ANIMAÇÃO
-
-//   const [animationState, setAnimatinoState ] = useState({
-//     isStopped: true, isPaused: false,
-//   })
-
- 
-
-//   //CONFIGURAÇÕES DEFALT
-
-//   const defaultOptions = {
-//     loop: false,
-//     autoplay: false, 
-//     animationData: animationSuporte,
-//     rendererSettings: {
-//       preserveAspectRatio: 'xMidYMid slice'
-//     }
-//   };
-
-//   return (
-
-// <>
-//   <div className='icons'>
-
-//     {/* ICONES */}
-//       <div className='responsive'> 
-//         <button 
-//           onMouseEnter={() => { 
-//               setAnimatinoState({
-//                 ...animationState,
-//                 isStopped: false,
-                
-//               })
-//         }}
-
-//             onMouseLeave={() => {
-//               setAnimatinoState({
-//                 ...animationState,
-//                 isStopped: true,
-
-//               })
-//             }}>Responsividade
-
-//         <Lottie 
-//           options={defaultOptions}
-//           // height={400}
-//           // width={400}
-//           isStopped={animationState.isStopped}
-//           isPaused={animationState.isPaused}/>
-//         </button>
-//       </div>
-//   </div>
-//     </>
-//   )
-// }
-
-// export default App
-
-
-
-
-
-
 
 import { useEffect, useRef } from 'react';
 import './App.css';
 import Lottie from 'react-lottie';
 import animationSuporte from './assets/suporte.json';
+import animationLayout from "./assets/layout.json"
+import animationFast from "./assets/fast.json"
+import animationGoogle from "./assets/google.json"
+import animationUi from "./assets/ui_ux.json"
+import animationPersonalizacao from "./assets/personalizacao.json"
+
 
 function App() {
   // Referência para o componente Lottie
   const lottieRef = useRef(null);
+  const suporteRef = useRef(null);
+  const fastRef = useRef(null);
+  const googleRef = useRef(null);
+  const personalizacaoRef = useRef(null)
+  const uixRef = useRef(null)
+
 
   // Função para ir para o último frame quando a animação carrega
   useEffect(() => {
     if (lottieRef.current) {
       const animation = lottieRef.current.anim;
-      animation.goToAndStop(animation.totalFrames - 1, true); // Vai para o último frame inicialmente
+      animation.goToAndStop(2000); // Vai para o último frame inicialmente
+
+      const animationSuporte = suporteRef.current.anim;
+      animationSuporte.goToAndStop(2000); // Vai para o último frame inicialmente
+
+      const animationFast = fastRef.current.anim;
+      animationFast.goToAndStop(2000); // Vai para o último frame inicialmente
+
+      const animationGoogle = googleRef.current.anim;
+      animationGoogle.goToAndStop(3000); // Vai para o último frame inicialmente
+
+      const animationPersonalizacao = personalizacaoRef.current.anim;
+      animationPersonalizacao.goToAndStop(2000); // Vai para o último frame inicialmente
+
+      const animationUix = uixRef.current.anim;
+      animationUix.goToAndStop(2000); // Vai para o último frame inicialmente
     }
   }, []);
 
-  // Função para reiniciar a animação quando o mouse entrar
-  const handleMouseEnter = () => {
-    if (lottieRef.current) {
-      const animation = lottieRef.current.anim;
-      animation.goToAndPlay(0, true); // Reinicia do frame 0
-    }
-  };
-
-  // Função para parar e definir no último frame quando o mouse sair
-  const handleMouseLeave = () => {
-    if (lottieRef.current) {
-      const animation = lottieRef.current.anim;
-      animation.goToAndStop(animation.totalFrames - 1, true); // Vai para o último frame ao sair o mouse
-    }
-  };
 
   // Configurações padrão
   const defaultOptions = {
-    loop: false,
+    loop: true,
     autoplay: false,
     animationData: animationSuporte,
     rendererSettings: {
@@ -486,23 +54,213 @@ function App() {
     },
   };
 
+  const layout = {
+    loop: true,
+    autoplay: false, 
+    animationData: animationLayout,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
+  const fast = {
+    loop: true,
+    autoplay: false, 
+    animationData: animationFast,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
+  const google = {
+    loop: true,
+    autoplay: false, 
+    animationData: animationGoogle,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
+  const personalizacao = {
+    loop: true,
+    autoplay: false, 
+    animationData: animationPersonalizacao,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
+  const ui = {
+    loop: true,
+    autoplay: false, 
+    animationData: animationUi,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
   return (
     <>
       <div className="icons">
         {/* Ícones */}
-        <div className="responsive">
+        <div className="suporte">
           <button
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onMouseEnter={() => {
+              if (suporteRef.current) {
+                const animationSuporte = suporteRef.current.anim;
+                animationSuporte.goToAndPlay(0, true); // Reinicia do frame 0
+              }
+            }}
+
+            onMouseLeave={() => {
+              if (suporteRef.current) {
+                const animationSuporte = suporteRef.current.anim;
+                animationSuporte.goToAndStop(2000); // Vai para o último frame ao sair o mouse
+              }
+            }}
           >
-            Responsividade
+            Suporte
             <Lottie
-              ref={lottieRef}
+              ref={suporteRef}
               options={defaultOptions}
             />
           </button>
+          
         </div>
+
+        <div className="layout">
+          <button
+            onMouseEnter={() => {
+              if (lottieRef.current) {
+                const animation = lottieRef.current.anim;
+                animation.goToAndPlay(0, true); // Reinicia do frame 0
+              }
+            }}
+
+            onMouseLeave={() => {
+              if (lottieRef.current) {
+                const animation = lottieRef.current.anim;
+                animation.goToAndStop(2000); // Vai para o último frame ao sair o mouse
+              }
+            }}
+        >
+            Layout
+            <Lottie
+              ref={lottieRef}
+              options={layout}
+            />
+          </button>
+        </div>
+
+        
+        {/* --------------------------------------------- */}
+        {/* icone relampago */}
+        <div className="fast">
+          <button
+            onMouseEnter={() => {
+              if (fastRef.current) {
+                const animationFast = fastRef.current.anim;
+                animationFast.goToAndPlay(0, true); // Reinicia do frame 0
+              }
+            }}
+
+            onMouseLeave={() => {
+              if (fastRef.current) {
+                const animaFast = fastRef.current.anim;
+                animaFast.goToAndStop(2000); // Vai para o último frame ao sair o mouse
+              }
+            }}
+        >
+            Fast
+            <Lottie
+              ref={fastRef}
+              options={fast}
+            />
+          </button>
+        </div>
+        
+        {/* --------------------------------------------- */}
+        {/* Icone Google */}
+        <div className="google">
+          <button
+            onMouseEnter={() => {
+              if (googleRef.current) {
+                const animationGoogle = googleRef.current.anim;
+                animationGoogle.goToAndPlay(0, true); // Reinicia do frame 0
+              }
+            }}
+
+            onMouseLeave={() => {
+              if (googleRef.current) {
+                const animationGoogle = googleRef.current.anim;
+                animationGoogle.goToAndStop(3000); // Vai para o último frame ao sair o mouse
+              }
+            }}
+        >
+            Fast
+            <Lottie
+              ref={googleRef}
+              options={google}
+            />
+          </button>
+        </div>
+            
+       {/* --------------------------------------------- */}
+        {/* Icone Personalização */}
+        <div className="personalizacao">
+          <button
+            onMouseEnter={() => {
+              if (personalizacaoRef.current) {
+                const animationPersonalizacao = personalizacaoRef.current.anim;
+                animationPersonalizacao.goToAndPlay(0, true); // Reinicia do frame 0
+              }
+            }}
+
+            onMouseLeave={() => {
+              if (personalizacaoRef.current) {
+                const animationPersonalizacao = personalizacaoRef.current.anim;
+                animationPersonalizacao.goToAndStop(2000); // Vai para o último frame ao sair o mouse
+              }
+            }}
+        >
+            Personalização
+            <Lottie
+              ref={personalizacaoRef}
+              options={personalizacao}
+            />
+          </button>
+        </div>
+
+       {/* --------------------------------------------- */}
+        {/* Icone UI/UX */}
+        <div className="UIX">
+          <button
+            onMouseEnter={() => {
+              if (uixRef.current) {
+                const animationUix = uixRef.current.anim;
+                animationUix.goToAndPlay(0, true); // Reinicia do frame 0
+              }
+            }}
+
+            onMouseLeave={() => {
+              if (uixRef.current) {
+                const animationUix = uixRef.current.anim;
+                animationUix.goToAndStop(2000); // Vai para o último frame ao sair o mouse
+              }
+            }}
+        >
+            Personalização
+            <Lottie
+              ref={uixRef}
+              options={ui}
+            />
+          </button>
+        </div>
+
+
+
       </div>
+
     </>
   );
 }
